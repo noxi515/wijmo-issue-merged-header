@@ -50,6 +50,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@grapecity/wijmo.styles/wijmo.css",
               "src/styles.scss"
             ],
             "scripts": []
