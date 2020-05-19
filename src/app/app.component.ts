@@ -60,6 +60,33 @@ export class AppComponent {
       prop8: 'ddd',
     } as Item;
     grid.columnHeaders.rows.splice(1, 0, row2);
+
+    // 行の中からCSSクラスが付いている要素を取得して、最初と最後にCSSクラスを付与する
+    grid.updatedView.addHandler((sender, args) => {
+      const rows = sender.hostElement.querySelectorAll('.wj-row');
+      for (const row of Array.from(rows)) {
+        for (const str of ['AAA', 'BBB']) {
+          const targetElements = row.querySelectorAll('.' + str);
+          if (targetElements.length === 0) {
+            continue;
+          }
+
+          for (let i = 0; i < targetElements.length; i++) {
+            if (i === 0) {
+              targetElements[i].classList.add('border-left');
+            } else {
+              targetElements[i].classList.remove('border-left');
+            }
+
+            if (i === targetElements.length - 1) {
+              targetElements[i].classList.add('border-right');
+            } else {
+              targetElements[i].classList.remove('border-right');
+            }
+          }
+        }
+      }
+    });
   }
 
   trackByColumn(index: number, column: Column) {
