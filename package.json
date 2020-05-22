@@ -24,9 +24,13 @@
     "@grapecity/wijmo.angular2.grid": "^5.20201.664",
     "@grapecity/wijmo.grid": "^5.20201.664",
     "@grapecity/wijmo.grid.detail": "^5.20201.664",
+    "@grapecity/wijmo.grid.multirow": "^5.20201.664",
+    "@grapecity/wijmo.grid.transposed": "^5.20201.664",
+    "@grapecity/wijmo.grid.xlsx": "^5.20201.664",
     "@grapecity/wijmo.input": "^5.20201.664",
     "@grapecity/wijmo.interop.grid": "^5.20201.664",
     "@grapecity/wijmo.styles": "^5.20201.664",
+    "@grapecity/wijmo.xlsx": "^5.20201.664",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

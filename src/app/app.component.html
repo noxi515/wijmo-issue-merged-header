@@ -4,10 +4,13 @@
   </ng-container>
 </div>
 
+<button (click)="exportExcel(grid)">Excel export</button>
+
 <wj-flex-grid
   #grid
   [allowMerging]="WjEnums.AllowMerging.ColumnHeaders"
   [itemsSource]="items"
+  [frozenColumns]="2"
   (initialized)="onGridInitialized(grid)"
 >
 
@@ -17,57 +20,90 @@
     [allowMerging]="true"
     [cssClassAll]="'prop-0'"
   ></wj-flex-grid-column>
-
   <wj-flex-grid-column
     [header]="'prop 1'"
     [binding]="'prop1'"
     [allowMerging]="true"
-    [cssClassAll]="'prop-1 AAA'"
+    [cssClassAll]="'prop-1'"
   ></wj-flex-grid-column>
+
+  <wj-flex-grid-column
+    [header]="''"
+    [binding]="''"
+    [width]="1"
+    [allowMerging]="true"
+    [allowResizing]="false"
+    [cssClassAll]="'border-left border-right'"
+  ></wj-flex-grid-column>
+
   <wj-flex-grid-column
     [header]="'prop 2'"
     [binding]="'prop2'"
     [allowMerging]="true"
     [cssClassAll]="'prop-2 AAA'"
   ></wj-flex-grid-column>
-
   <wj-flex-grid-column
     [header]="'prop 3'"
     [binding]="'prop3'"
     [allowMerging]="true"
     [cssClassAll]="'prop-3 AAA'"
   ></wj-flex-grid-column>
+
   <wj-flex-grid-column
     [header]="'prop 4'"
     [binding]="'prop4'"
     [allowMerging]="true"
     [cssClassAll]="'prop-4 AAA'"
   ></wj-flex-grid-column>
-
   <wj-flex-grid-column
     [header]="'prop 5'"
     [binding]="'prop5'"
     [allowMerging]="true"
-    [cssClassAll]="'prop-5 BBB'"
+    [cssClassAll]="'prop-5 AAA'"
   ></wj-flex-grid-column>
+
+  <wj-flex-grid-column
+    [header]="''"
+    [binding]="''"
+    [width]="1"
+    [allowMerging]="true"
+    [allowResizing]="false"
+    [cssClassAll]="'border-left border-right'"
+  ></wj-flex-grid-column>
+
   <wj-flex-grid-column
     [header]="'prop 6'"
     [binding]="'prop6'"
     [allowMerging]="true"
     [cssClassAll]="'prop-6 BBB'"
   ></wj-flex-grid-column>
-
   <wj-flex-grid-column
     [header]="'prop 7'"
     [binding]="'prop7'"
     [allowMerging]="true"
     [cssClassAll]="'prop-7 BBB'"
   ></wj-flex-grid-column>
+
   <wj-flex-grid-column
     [header]="'prop 8'"
     [binding]="'prop8'"
     [allowMerging]="true"
     [cssClassAll]="'prop-8 BBB'"
+  ></wj-flex-grid-column>
+  <wj-flex-grid-column
+    [header]="'prop 9'"
+    [binding]="'prop9'"
+    [allowMerging]="true"
+    [cssClassAll]="'prop-9 BBB'"
+  ></wj-flex-grid-column>
+
+  <wj-flex-grid-column
+    [header]="''"
+    [binding]="''"
+    [width]="1"
+    [allowMerging]="true"
+    [allowResizing]="false"
+    [cssClassAll]="'border-left border-right'"
   ></wj-flex-grid-column>
 
 </wj-flex-grid>
